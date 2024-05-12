@@ -1,0 +1,13 @@
+#bitcoin-connect-login-btn, #zap-button {
+    padding: 10px 15px;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#bitcoin-connect-login-btn:hover, #zap-button:hover {
+    background-color: #006799;
+}
