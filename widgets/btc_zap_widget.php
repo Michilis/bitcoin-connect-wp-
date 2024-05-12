@@ -13,14 +13,14 @@ class BTC_Zap_Widget extends Widget_Base {
     }
 
     public function get_icon() {
-        return 'eicon-lightning';
+        return 'eicon-send';
     }
 
     protected function _register_controls() {
         $this->start_controls_section(
             'zap_section',
             [
-                'label' => __('Zap Settings', 'bitcoin-connect-wp'),
+                'label' => __('Settings', 'bitcoin-connect-wp'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -31,7 +31,7 @@ class BTC_Zap_Widget extends Widget_Base {
                 'label' => __('Button Text', 'bitcoin-connect-wp'),
                 'type' => Controls_Manager::TEXT,
                 'default' => __('Send Sats', 'bitcoin-connect-wp'),
-                'placeholder' => __('Send Sats', 'bitcoin-connect-wp'),
+                'placeholder' => __('Enter button text here', 'bitcoin-connect-wp'),
             ]
         );
 
@@ -40,12 +40,24 @@ class BTC_Zap_Widget extends Widget_Base {
 
     protected function render() {
         $settings = $this->get_settings_for_display();
-        echo '<button id="zap-button" onclick="btcZap();">' . esc_html($settings['button_text']) . '</button>';
+        echo '<button onclick="btcZap();">' . esc_html($settings['button_text']) . '</button>';
     }
 
     public function _content_template() {
         ?>
-        <button id="zap-button" onclick="btcZap();">{{{ settings.button_text }}}</button>
+        <button onclick="btcZap();">{{{ settings.button_text }}}</button>
+        <?php
+    }
+
+    public function btcZap() {
+        // Add JavaScript for Zap functionality
+        ?>
+        <script>
+        function btcZap() {
+            // Example of sending sats to a post
+            console.log('Sending sats...');
+        }
+        </script>
         <?php
     }
 }
