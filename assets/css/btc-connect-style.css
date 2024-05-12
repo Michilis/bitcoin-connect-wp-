@@ -1,13 +1,36 @@
-#bitcoin-connect-login-btn, #zap-button {
-    padding: 10px 15px;
-    background-color: #0073aa;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* btc-connect-style.css */
+
+/* General styles for Bitcoin Connect buttons */
+.btc-connect-button {
+    display: inline-block;
+    padding: 10px 20px;
     font-size: 16px;
+    color: #fff;
+    background-color: #0073aa;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#bitcoin-connect-login-btn:hover, #zap-button:hover {
-    background-color: #006799;
+.btc-connect-button:hover {
+    background-color: #005a88;
+}
+
+/* Specific styles for the login button */
+#btc-connect-login-btn {
+    background-color: #21a321; /* A greenish tone indicating an initial action like login */
+}
+
+#btc-connect-login-btn:hover {
+    background-color: #198719;
+}
+
+/* Specific styles for the zap button */
+#zap-button {
+    background-color: #d9534f; /* A reddish tone indicating a potentially costly action like sending sats */
+}
+
+#zap-button:hover {
+    background-color: #c9302c;
 }
